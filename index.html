@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Violin Kinya — Student Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of a student software engineer, developer & designer. Shows projects, skills and contact info." />
+ <link rel="stylesheet" href="style.css">
+</head>
+<!-- PROJECT DETAILS MODAL -->
+
+<div id="projectModal" class="project-modal">
+
+    <div class="modal-content">
+
+        <button class="close-modal"
+                onclick="closeProject()">
+            &times;
+        </button>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <h4>Key Features</h4>
+
+        <ul id="modalFeatures"></ul>
+
+        <h4>Technologies</h4>
+
+        <p id="modalTech"></p>
+
+        <h4>My Role</h4>
+
+        <p id="modalRole"></p>
+
+        <div class="modal-links">
+
+            <a id="modalGithub"
+               href="#"
+               target="_blank">
+                View on GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">VK</div>
+        <div>
+          <h1>Violin Kinya</h1>
+          <div class="muted">Student Software Engineer • Designer • Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro">
+          <h2>Hi — I’m <span style="color:var(--accent)">Violin Kinya</span></h2>
+          <p>I’m a software engineering student who builds web apps, delightful UI, and experiments with full-stack projects. I love turning ideas into usable code and clean designs.</p>
+
+          <div class="row cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="mailto:violinkinya25@gmail.com">Email Me</a>
+            <a class="btn" href="#resume">Download Resume</a>
+          </div>
+
+          <div style="margin-top:14px" class="muted">Tip: replace placeholders (name, links, screenshots) with your real content. Use Github for live demos.</div>
+        </div>
+
+        <aside class="card profile">
+        <div class="avatar">
+   <img src="images/violin.jpg" alt="Violin Kinya">
+</div>
+          <div class="meta">Software Engineering student at Kiriri Womens' University of Science and Technology<br/>Expected graduation: 2027</div>
+          <div style="width:100%;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <a class="btn" href="https://github.com/mwenda-v/" target="_blank">GitHub</a>
+            <a class="btn" href="https://linkedin.com/in/violin-kinya" target="_blank">LinkedIn</a>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="section">
+        <h3>Selected Projects</h3>
+
+<!-- Project Filters -->
+<div class="project-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web Development</button>
+    <button class="filter-btn" data-filter="database">Database</button>
+    <button class="filter-btn" data-filter="other">Other</button>
+</div>
+
+<div class="projects">
+
+    <!-- PROJECT 1 -->
+    <article class="project" data-category="web database">
+
+        <div class="thumb">
+            <img src="images/dairy-system.png"
+                 alt="Integrated Dairy Farm Management System">
+        </div>
+
+        <div class="project-content">
+
+            <span class="project-type">Web Application</span>
+
+            <h4>Integrated Dairy Farm Management Information System</h4>
+
+            <p class="muted">
+                A web-based system designed to help dairy farmers
+                manage animal records, milk production, health,
+                breeding and farm financial information.
+            </p>
+
+            <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+            </div>
+
+            <div class="meta-row">
+
+                <div class="muted">
+                    Role: Developer
+                </div>
+
+                <div class="links">
+                    <button class="details-btn"
+                            onclick="openProject('dairyProject')">
+                        View Details
+                    </button>
+
+                  <a href="https://github.com/mwenda-v/dairy-farm-system"
+   target="_blank">
+    GitHub
+</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 2 -->
+    <article class="project" data-category="database web">
+
+        <div class="thumb">
+            <img src="images/project2.png"
+                 alt="Database Project">
+        </div>
+
+        <div class="project-content">
+
+            <span class="project-type">Database System</span>
+
+            <h4>Database Management Project</h4>
+
+            <p class="muted">
+                A database-focused project demonstrating database
+                design, relationships, SQL queries and data management.
+            </p>
+
+            <div class="tech-tags">
+                <span>MySQL</span>
+                <span>SQL</span>
+                <span>PHP</span>
+            </div>
+
+            <div class="meta-row">
+
+                <div class="muted">
+                    Role: Developer
+                </div>
+
+                <div class="links">
+
+                    <button class="details-btn"
+                            onclick="openProject('databaseProject')">
+                        View Details
+                    </button>
+
+                  <a href="https://github.com/mwenda-v/database-management-project"
+   target="_blank">
+    GitHub
+</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 3 -->
+    <article class="project" data-category="other">
+
+        <div class="thumb">
+            <img src="images/project3.png"
+                 alt="Programming Project">
+        </div>
+
+        <div class="project-content">
+
+            <span class="project-type">Programming</span>
+
+            <h4>C# Application Project</h4>
+
+            <p class="muted">
+                A C# application developed to demonstrate
+                application programming concepts, logic and
+                user interaction.
+            </p>
+
+            <div class="tech-tags">
+                <span>C#</span>
+                <span>.NET</span>
+                <span>Visual Studio</span>
+            </div>
+
+            <div class="meta-row">
+
+                <div class="muted">
+                    Role: Developer
+                </div>
+
+                <div class="links">
+
+                    <button class="details-btn"
+                            onclick="openProject('csharpProject')">
+                        View Details
+                    </button>
+
+                    <a href="https://github.com/mwenda-v/csharp-application-project"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+      <section id="skills" class="section card">
+        <h3>Skills</h3>
+        <div class="skills">
+          <div class="chip">JavaScript</div>
+          <div class="chip">HTML & CSS</div>
+          <div class="chip">React</div>
+          <div class="chip">Node.js</div>
+          <div class="chip">Python</div>
+          <div class="chip">SQL / MySQL</div>
+          <div class="chip">Figma</div>
+          <div class="chip">Git</div>
+          <div class="chip">Responsive Design</div>
+        </div>
+      </section>
+
+      <section id="about" class="section card">
+        <h3>About Me</h3>
+        <p class="muted">I’m currently pursuing a degree in software engineering. I enjoy building projects that combine clean UI with solid backend logic. Outside coding, I explore product design and simple animations. I’m available for internships and freelance work.</p>
+      </section>
+
+      <section id="contact" class="section card">
+        <h3>Contact</h3>
+        <p class="muted">Want to collaborate or offer an internship? Send a message below or email me directly at <a href="mailto:violinkinya25@mail.com">violinKinya25@gmail.com</a>.</p>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a demo form. Replace or wire it to your email service.');">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea placeholder="Message" required></textarea>
+          <div style="display:flex;gap:8px">
+            <button type="submit" class="btn primary">Send message</button>
+            <a class="btn" href="#">Schedule a chat</a>
+          </div>
+        </form>
+      </section>
+
+      <section id="resume" class="section card">
+        <h3>Resume</h3>
+        <p class="muted">Add a downloadable resume (PDF) here so recruiters can grab it easily.</p>
+        <a href="assets/Violin_Kinya_Mwenda_CV.pdf" class="btn primary"
+   target="_blank">
+   View Resume
+</a>
+
+
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted"> @violinkinya — Student Software Developer </div>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
