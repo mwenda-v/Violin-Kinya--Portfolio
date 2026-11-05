@@ -60,7 +60,7 @@
         ],
 
         tech:
-            "MySQL, SQL and PHP",
+            "MySQL and PHP",
 
         role:
             "Developer",
