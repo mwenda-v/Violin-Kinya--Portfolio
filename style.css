@@ -27,7 +27,11 @@
 
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
     .brand{display:flex;gap:14px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#012029;font-weight:700}
+    .logo{
+        width:56px;
+        height:56px;
+        border-radius:12px;
+        background:var(--accent);display:flex;align-items:center;justify-content:center;color:#012029;font-weight:700}
     .brand h1{font-size:18px;margin:0}
     nav{display:flex;gap:12px}
     nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
